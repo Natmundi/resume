@@ -1,0 +1,101 @@
+<div>
+  <section>
+    {{> title data="Albert Einstein" big=true}}
+
+    <div><h1>{{name}}</h1></div>
+    <br>
+    <div>{{birthdate}} - {{birthplace}}</div>
+    <br>
+    <div>{{deathdate}} - {{deathplace}}</div>
+    <br>
+    <div>{{nationality}}</div>
+    <br>
+    <br>
+    <div>{{occupation}}</div>
+    <br>
+    <div>{{known_for}}</div>
+  </section>
+  <section>
+    <title>Education</title>
+    <ul>
+        {{#with education}}
+        <li>
+            {{degree}}
+            {{field}}
+            {{institution}}
+            {{year}}
+        </li>
+        {{/with}}
+    </ul>
+    </section>
+    <section>
+        <title>Publications</title>
+        <ul>
+        {{#each notable_publications}}
+        <li>
+            {{title}}
+            {{year}}
+            {{publisher}}
+        </li>
+        {{/each}}
+        </ul>
+    </section>
+    <section>
+        <div><strong>Partners</strong></div>
+        <ul>
+            {{#each partners}}
+            <li>
+                {{name}}
+                {{relationship}}
+                {{years}}
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+    <section>
+        <div><strong>Awards</strong></div>
+        <ul>
+            {{#with awards}}
+            <li>
+                {{title}}
+                {{year}}
+                {{description}}
+            </li>
+            {{/with}}
+        </ul>
+    </section>
+    <br>
+    <hr>
+    <section>
+    <br>
+    <div>{{influences}}</div>
+    <br>
+    <div>{{influenced}}</div>
+    <br>
+    <div>{{quotes}}</div>
+    <br>
+    <div><em>Discoveries</em></div>
+    <ul>
+        {{#with discoveries}}
+        <li>
+            {{title}}
+            {{year}}
+            {{description}}
+        </li>
+        {{/with}}
+    </ul>
+    <br>
+    <div><em>Contributions</em></div>
+    <ul>
+        {{#with contributions}}
+        <li>
+            {{title}}
+            {{description}}
+            {{year}}
+            {{field}}
+        </li>
+        {{/with}}
+    </ul>
+    </section>
+  
+</div>
