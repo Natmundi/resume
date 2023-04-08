@@ -1,0 +1,99 @@
+<div>
+    {{> title data="Program" big=true}}
+  <section>
+    <br>
+    <ul>
+    {{#with program}}
+        <li>
+            <br>
+            <ul>
+            {{#each excursion}}
+            <li>
+                {{name}}
+                <ul>
+                {{#each location}}
+                <li>
+                    {{city}} / {{country}}
+                </li>
+                {{/each}}
+                </ul>
+                {{data}}
+                <br>
+                <ul>
+                {{#each program}}
+                <li>
+                    {{name}}
+                    {{type}}
+                    {{duration}}
+                    <br>
+                    <ul>
+                    {{#each  details}}
+                    <li>
+                        <ul>
+                        {{#if museum}}
+                        <li>
+                            {{name}}
+                            {{#each location}}
+                            {{address}} / {{city}} / {{country}}
+                            {{/each}}
+                            <br>
+                            <ul>
+                            {{#each exhibits}}
+                            <li>
+                                {{name}}
+                                {{artist}}
+                                {{description}}
+                                {{audio_guide}}
+                            </li>
+                            {{/each}}
+                            </ul>
+                        </li>
+                        
+                        {{else}}
+                        <ul>
+                        {{#each venue}}
+                        <li>
+                            {{name}}
+                            {{#each location}}
+                                {{address}} /
+                                {{city}} /
+                                {{country}}
+                            {{/each}}
+                            <br>
+                            <ul>
+                            {{#each performers}}
+                            <li>
+                                {{name}}
+                                {{type}}
+                            </li>
+                            {{/each}}
+                            </ul>
+                        </li>
+                        {{/each}}
+                        </ul>
+                        {{/if}}
+                        </ul>
+                    </li>
+                    {{/each}}
+                    </ul>
+                    <br>
+                    <ul>
+                    {{#each guide}}
+                    <li>
+                        {{name}}
+                        {{language}}
+                        {{rating}}
+                    </li>
+                    {{/each}}
+                    </ul>
+                </li>
+                {{/program}}
+                </ul>
+            </li>
+            {{/each}}
+            </ul>
+        </li>
+    {{/with}}
+    </ul>
+  </section>
+</div>
