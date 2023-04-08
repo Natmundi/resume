@@ -1,101 +1,120 @@
 <div>
   <section>
-    {{> title data="Albert Einstein" big=true}}
 
     <div><h1>{{name}}</h1></div>
-    <br>
+    <br />
     <div>{{birthdate}} - {{birthplace}}</div>
-    <br>
+    <br />
     <div>{{deathdate}} - {{deathplace}}</div>
-    <br>
+    <br />
     <div>{{nationality}}</div>
-    <br>
-    <br>
-    <div>{{occupation}}</div>
-    <br>
-    <div>{{known_for}}</div>
+    <br />
+    <hr />
+    <div><strong>{{occupation}}</strong></div>
+    <br />
+    <div><strong>{{known_for}}</strong></div>
   </section>
   <section>
-    <title>Education</title>
+    <div><strong>Education</strong></div>
     <ul>
-        {{#with education}}
+      {{#each education}}
         <li>
-            {{degree}}
-            {{field}}
-            {{institution}}
-            {{year}}
+          {{degree}}
+          {{field}}
+          /
+          {{institution}}
+          -
+          {{year}}
+
         </li>
-        {{/with}}
+      {{/each}}
     </ul>
-    </section>
-    <section>
-        <title>Publications</title>
-        <ul>
-        {{#each notable_publications}}
+  </section>
+  <section>
+    <div><strong>Publications</strong></div>
+    <ul>
+      {{#each notable_publications}}
         <li>
-            {{title}}
-            {{year}}
-            {{publisher}}
+          {{title}}
+          /
+          {{year}}
+          /
+          {{publisher}}
         </li>
-        {{/each}}
-        </ul>
-    </section>
-    <section>
-        <div><strong>Partners</strong></div>
-        <ul>
-            {{#each partners}}
-            <li>
-                {{name}}
-                {{relationship}}
-                {{years}}
-            </li>
-            {{/each}}
-        </ul>
-    </section>
-    <section>
-        <div><strong>Awards</strong></div>
-        <ul>
-            {{#with awards}}
-            <li>
-                {{title}}
-                {{year}}
-                {{description}}
-            </li>
-            {{/with}}
-        </ul>
-    </section>
-    <br>
-    <hr>
-    <section>
-    <br>
+      {{/each}}
+    </ul>
+  </section>
+  <section>
+    <div><strong>Partners</strong></div>
+    <ul>
+      {{#each partners}}
+        <li>
+          {{name}}
+          /
+          {{relationship}}
+          /
+          {{years}}
+        </li>
+      {{/each}}
+    </ul>
+  </section>
+  <section>
+    <div><strong>Awards</strong></div>
+    <ul>
+      {{#each awards}}
+        <li>
+          {{title}}
+          /
+          {{year}}
+          /
+          {{description}}
+        </li>
+      {{/each}}
+    </ul>
+  </section>
+  <br />
+  <hr />
+  <section>
+    <br />
+    <div><em>Influences</em></div>
+    <br />
     <div>{{influences}}</div>
-    <br>
+    <br />
+    <div><em>Influenced</em></div>
+    <br />
     <div>{{influenced}}</div>
-    <br>
+    <br />
+    <div><em>Quotes</em></div>
+    <br />
     <div>{{quotes}}</div>
-    <br>
+    <br />
     <div><em>Discoveries</em></div>
     <ul>
-        {{#with discoveries}}
+      {{#each major_discoveries}}
         <li>
-            {{title}}
-            {{year}}
-            {{description}}
+          {{title}}
+          /
+          {{year}}
+          /
+          {{description}}
         </li>
-        {{/with}}
+      {{/each}}
     </ul>
-    <br>
+    <br />
     <div><em>Contributions</em></div>
     <ul>
-        {{#with contributions}}
+      {{#with contributions}}
         <li>
-            {{title}}
-            {{description}}
-            {{year}}
-            {{field}}
+          {{title}}
+          /
+          {{description}}
+          /
+          {{year}}
+          /
+          {{field}}
         </li>
-        {{/with}}
+      {{/with}}
     </ul>
-    </section>
-  
+  </section>
+
 </div>
