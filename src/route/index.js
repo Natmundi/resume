@@ -459,7 +459,6 @@ router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
     layout: 'program',
-
     program: {
       excursion: {
         name: 'Cultural Tour',
@@ -539,7 +538,6 @@ router.get('/program', function (req, res) {
     },
   })
 })
-
 // ===============================================================
 // ================================================================
 

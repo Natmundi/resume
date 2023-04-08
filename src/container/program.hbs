@@ -1,99 +1,115 @@
 <div>
-    {{> title data="Program" big=true}}
-  <section>
-    <br>
-    <ul>
-    {{#with program}}
-        <li>
-            <br>
-            <ul>
-            {{#each excursion}}
-            <li>
-                {{name}}
-                <ul>
-                {{#each location}}
-                <li>
-                    {{city}} / {{country}}
-                </li>
-                {{/each}}
-                </ul>
-                {{data}}
+    <div>
+     {{> title data="Program" big=true}}
+    </div>
+    <section>
+            
+        {{#with program}}
                 <br>
-                <ul>
-                {{#each program}}
+                <div><em>Excursion</em></div>
+                <br>
+            <ul>
+            {{#with excursion}}
                 <li>
-                    {{name}}
-                    {{type}}
-                    {{duration}}
+                        {{name}}
+                        <br>
+                        {{#with location}}
+                            {{city}} - {{country}}
+                        {{/with}}
+                    </li>
+                    <br>
+                        {{date}}
+                    <br>
+                    <hr>
                     <br>
                     <ul>
-                    {{#each  details}}
-                    <li>
-                        <ul>
-                        {{#if museum}}
+                    {{#each program}}
                         <li>
-                            {{name}}
-                            {{#each location}}
-                            {{address}} / {{city}} / {{country}}
-                            {{/each}}
-                            <br>
-                            <ul>
-                            {{#each exhibits}}
-                            <li>
-                                {{name}}
-                                {{artist}}
-                                {{description}}
-                                {{audio_guide}}
-                            </li>
-                            {{/each}}
-                            </ul>
-                        </li>
+                        {{name}} /
+                        {{type}} /
+                        {{duration}} 
+                    <br>
+
+                        {{#if details.museum}}
+                            {{#with details.museum}}
+                    <br>    
+                            {{name}} 
                         
-                        {{else}}
-                        <ul>
-                        {{#each venue}}
-                        <li>
+                                <address>
+                                {{#with location}} 
+                                    <li>
+                                        {{address}} /
+                                        {{city}} /
+                                        {{country}}
+                                    </li>
+                                </address>
+                                {{/with}}
+                        
+                    <br>
+                            <ul>
+                                {{#each exhibits}}
+                                <li>
+                                    {{name}} /
+                                    
+                                    {{#if artist}}
+                                        ({{artist}})
+                                    {{else}}
+                                        (artist unknown)
+                                    {{/if}}
+                                    <br>
+                                    
+                                    {{description}}
+                                    <br>
+                                    
+                                    {{#if audio_guide}} (Audio guide exist) {{/if}}
+                                <br>
+                                </li>
+                                {{/each}}
+                            </ul>
+                            {{/with}}
+                        {{/if}}
+                        <br>
+                        
+                        {{#if details.venue}}
+                            {{#with details.venue}}
+
                             {{name}}
-                            {{#each location}}
+                            <address>
+                                {{#with location}}
                                 {{address}} /
                                 {{city}} /
                                 {{country}}
-                            {{/each}}
+                                {{/with}}
+                            </address>
+                            {{/with}}
+                            <br>
+                            <div><em>Performers</em></div>
                             <br>
                             <ul>
-                            {{#each performers}}
-                            <li>
-                                {{name}}
-                                {{type}}
-                            </li>
+                            {{#each details.performers}}
+                                <li>
+                                    {{name}} / {{type}}
                             {{/each}}
+                                </li>
                             </ul>
-                        </li>
-                        {{/each}}
-                        </ul>
+                            <br>
+                            <div><em>Guide</em></div>
+                            <br>
+                            {{#with details.guide}}
+                                {{name}} /
+                                {{language}} /
+                                ({{rating}})
+                            {{/with}}
                         {{/if}}
-                        </ul>
-                    </li>
-                    {{/each}}
-                    </ul>
-                    <br>
-                    <ul>
-                    {{#each guide}}
-                    <li>
-                        {{name}}
-                        {{language}}
-                        {{rating}}
-                    </li>
+                       
+                        </li>
                     {{/each}}
                     </ul>
                 </li>
-                {{/program}}
-                </ul>
-            </li>
-            {{/each}}
+            {{/with}}
             </ul>
-        </li>
-    {{/with}}
-    </ul>
-  </section>
+            
+        {{/with}}
+            
+    </section>
 </div>
