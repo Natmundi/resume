@@ -455,7 +455,6 @@ router.get('/person', function (req, res) {
   })
 })
 
-
 router.get('/web', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('web', {
@@ -584,7 +583,6 @@ router.get('/web', function (req, res) {
   })
 })
 
-=======
 router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
@@ -668,9 +666,6 @@ router.get('/program', function (req, res) {
     },
   })
 })
-
-
-
 
 // Підключаємо роутер до бек-енду
 module.exports = router
