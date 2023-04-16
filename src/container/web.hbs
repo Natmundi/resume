@@ -15,12 +15,13 @@
                 <br>
                 {{description}}
                 <br>
-                <br>
+                
                     <ul>
                     {{#each elements}}
                     <li>
                         {{name}} - 
                         {{description}}
+                        <br>
                         <ul>
                         {{#each attributes}}
                             <li>
@@ -33,15 +34,51 @@
                     </li>
                     {{/each}}
                     </ul>
-                   
+                <br>
                 
-                {{#if languages.attributes}}
-                        {{#with languages.attributes}}
-                            {{name}}
-                            {{description}}
-                        {{/with}}
-                {{/if}}
+                 <ul>
+                    {{#each properties}}
+                    <li>
+                        {{name}} -
+                        {{description}}
+                        <br>
+                        <ul>
+                        {{#each values}}
+                            <li>
+                                {{value}}
+                                <br>
+                                {{description}}
+                            </li>
+                        {{/each}}
+                        </ul>
+                    </li>
+                    {{/each}}
+                    </ul>
+                <br>
+                
+                 <ul>
+                    {{#each functions}}
+                    <li>
+                        {{name}} -
+                        {{description}}
+                        <br>
+                        <ul>
+                        {{#each parameters}}
+                            <li>
+                                {{name}} /
+                                {{type}}
+                                <br>
+                                {{description}}
+                            </li>
+                        {{/each}}
+                        </ul>
+                    </li>
+                    {{/each}}
+                    </ul>
+                    
+
                 {{/each}}
+                
             </li>
 
         {{/with}}
