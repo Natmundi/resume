@@ -1,0 +1,115 @@
+<div>
+    <div>
+     {{> title data="Program" big=true}}
+    </div>
+    <section>
+            
+        {{#with program}}
+                <br>
+                <div><em>Excursion</em></div>
+                <br>
+            <ul>
+            {{#with excursion}}
+                <li>
+                        {{name}}
+                        <br>
+                        {{#with location}}
+                            {{city}} - {{country}}
+                        {{/with}}
+                    </li>
+                    <br>
+                        {{date}}
+                    <br>
+                    <hr>
+                    <br>
+                    <ul>
+                    {{#each program}}
+                        <li>
+                        {{name}} /
+                        {{type}} /
+                        {{duration}} 
+                    <br>
+
+                        {{#if details.museum}}
+                            {{#with details.museum}}
+                    <br>    
+                            {{name}} 
+                        
+                                <address>
+                                {{#with location}} 
+                                    <li>
+                                        {{address}} /
+                                        {{city}} /
+                                        {{country}}
+                                    </li>
+                                </address>
+                                {{/with}}
+                        
+                    <br>
+                            <ul>
+                                {{#each exhibits}}
+                                <li>
+                                    {{name}} /
+                                    
+                                    {{#if artist}}
+                                        ({{artist}})
+                                    {{else}}
+                                        (artist unknown)
+                                    {{/if}}
+                                    <br>
+                                    
+                                    {{description}}
+                                    <br>
+                                    
+                                    {{#if audio_guide}} (Audio guide exist) {{/if}}
+                                <br>
+                                </li>
+                                {{/each}}
+                            </ul>
+                            {{/with}}
+                        {{/if}}
+                        <br>
+                        
+                        {{#if details.venue}}
+                            {{#with details.venue}}
+
+                            {{name}}
+                            <address>
+                                {{#with location}}
+                                {{address}} /
+                                {{city}} /
+                                {{country}}
+                                {{/with}}
+                            </address>
+                            {{/with}}
+                            <br>
+                            <div><em>Performers</em></div>
+                            <br>
+                            <ul>
+                            {{#each details.performers}}
+                                <li>
+                                    {{name}} / {{type}}
+                            {{/each}}
+                                </li>
+                            </ul>
+                            <br>
+                            <div><em>Guide</em></div>
+                            <br>
+                            {{#with details.guide}}
+                                {{name}} /
+                                {{language}} /
+                                ({{rating}})
+                            {{/with}}
+                        {{/if}}
+                       
+                        </li>
+                    {{/each}}
+                    </ul>
+                </li>
+            {{/with}}
+            </ul>
+            
+        {{/with}}
+            
+    </section>
+</div>
