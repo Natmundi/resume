@@ -7,18 +7,14 @@
     {{#with history}}
       {{year}}
       /
-      {{founder}}
+      Founder: {{founder}}
     {{/with}}
   </p>
   <br />
-  <div><strong>Types</strong></div>
-  <ul>
-    {{#each types}}
-      <li>{{this}}</li>
-    {{/each}}
-  </ul>
+  {{> title data="Types" big=false}}
+  {{>jscomponent quality=types}}
   <br />
-  <div><strong>Syntax</strong></div>
+  {{> title data="Syntax" big=false}}
     <ul>
         {{#with syntax}}
         
@@ -31,28 +27,16 @@
         {{/with}}
     </ul>
   <br>
-  <div><strong>Features</strong></div>
-    <ul>
-        {{#each features}}
-        <li>{{this}}</li>
-        {{/each}}
-    </ul>
+  {{> title data="Features" big=false}}
+   {{>jscomponent quality=features}}
   <br>
-  <div><strong>Libraries</strong></div>
-    <ul>
-        {{#each libraries}}
-        <li>{{this}}</li>
-        {{/each}}
-    </ul>
+  {{> title data="Libraries" big=false}}
+    {{>jscomponent quality=libraries}}
   <br>
-   <div><strong>Tools</strong></div>
-    <ul>
-        {{#each tools}}
-        <li>{{this}}</li>
-        {{/each}}
-    </ul>
+   {{> title data="Tools" big=false}}
+   {{>jscomponent quality=tools}}
   <br>
-  <div><strong>Community</strong></div>
+  {{> title data="Community" big=false}}
     <ul>
         {{#each community}}
         <li>
