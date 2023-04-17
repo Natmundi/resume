@@ -1,0 +1,42 @@
+<div>
+  <h1>{{make}} {{model}} ({{year}})</h1>
+  <br />
+  <p>Color: {{color}}</p>
+  <hr />
+    {{> title data="Features" big=true}}
+    <ul>
+        {{#with features}}
+        <li>
+            {{> title data="Interior" big=false}}
+            <ul>
+            {{#with interior}}
+                <li>
+                    Seats:{{#with seats}}
+                        {{material}} / {{color}}
+                        ({{#if heated}} heated {{/if}}
+                        {{#if ventilated}} ventilated {{/if}})
+                    {{/with}}
+                    <br>
+                    Dashboard: {{#with dashboard}}
+                        {{material}} / {{color}} 
+                            {{#with display}}
+                            {{type}} / ({{size}}) / {{resolution}} /
+                            {{#if touchscreen}} touchscreen {{/if}}
+                            {{/with}}
+                    {{/with}}
+                    <br>
+                    Audio: {{#with audio}}
+                        {{system}} / {{speakers}} /
+                        {{#if subwoofer}} subwoofer {{/if}} /
+                        {{#if bluetooth}} bluetooth {{/if}} /
+                        {{#if USB}} USB {{/if}}
+                        
+                    {{/with}}
+                </li>             
+            {{/with}}
+            </ul>
+        </li>       
+        {{/with}}
+    </ul>
+
+</div>
