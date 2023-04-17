@@ -1,0 +1,42 @@
+<div>
+  <h1>{{name}}</h1>
+  <section>
+    {{#each users}}
+      <h2>{{name}}</h2>
+      <em>{{gender}}</em>
+      /
+      <em>{{age}}</em>
+        {{> title data="Friends" big=false}}
+        <ul>
+            {{#each friends}}
+            <li>
+                <h3>{{name}}</h3>
+                <em>{{gender}}</em> / 
+                <em>{{age}}</em>
+                <br>
+                {{> title data="Mutual friends" big=false}}
+                    <ul> 
+                    {{#each mutual_friends}}
+                        <li>
+                            <h4>{{name}}</h4>
+                            <em>{{gender}}</em> / 
+                            <em>{{age}}</em>
+                        </li>
+                    {{/each}}
+                    <br>
+                    </ul>
+                {{> title data="Groups" big=false}}
+                <ul>
+                {{#each groups}}
+                    <li>
+                        {{name}}
+                    </li>
+                {{/each}}
+                </ul> 
+            </li>
+            {{/each}}
+        </ul>
+    {{/each}}
+    <br>
+  </section>
+</div>
