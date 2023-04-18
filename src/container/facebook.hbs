@@ -2,57 +2,27 @@
   <h1>{{name}}</h1>
   <section>
     {{#each users}}
-      <h2>{{name}}</h2>
-      <em>{{gender}}</em>
-      /
-      <em>{{age}}</em>
+      {{> persface}}
         {{> title data="Friends" big=false}}
         <ul>
             {{#each friends}}
             <li>
-                <h3>{{name}}</h3>
-                <em>{{gender}}</em> / 
-                <em>{{age}}</em>
+                {{> persface}}
                 <br>
                 {{> title data="Mutual friends" big=false}}
                     <ul> 
                     {{#each mutual_friends}}
                         <li>
-                            <h4>{{name}}</h4>
-                            <em>{{gender}}</em> / 
-                            <em>{{age}}</em>
+                            {{> persface}}
                         </li>
                     {{/each}}
                     <br>
                     </ul>
-                {{#if groups}}
-                {{> title data="Groups" big=false}}
-                <ul>
-                    {{#each groups}}
-                    <li>
-                        {{name}}
-                        <br>
-                        {{description}}
-                        <br>
-                        Members:
-                        <ul>
-                        {{#each members}}
-                            <li>
-                                <h4>{{name}}</h4>
-                                <em>{{gender}}</em> / 
-                                <em>{{age}}</em>
-                            </li>
-                            <br>
-                        {{/each}}
-                        </ul>
-                
-                    </li>
-                    {{/each}}
-                </ul> 
-                {{/if}}
+               {{> groupfaceb}}
             </li>
             {{/each}}
         </ul>
+        {{> groupfaceb}}
     {{/each}}
     <br>
   </section>
