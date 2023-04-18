@@ -25,11 +25,10 @@
                     {{/each}}
                     <br>
                     </ul>
-                
+                {{#if groups}}
                 {{> title data="Groups" big=false}}
-                
                 <ul>
-                {{#each groups}}
+                    {{#each groups}}
                     <li>
                         {{name}}
                         <br>
@@ -46,9 +45,11 @@
                             <br>
                         {{/each}}
                         </ul>
+                
                     </li>
-                {{/each}}
+                    {{/each}}
                 </ul> 
+                {{/if}}
             </li>
             {{/each}}
         </ul>
