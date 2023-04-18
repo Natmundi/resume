@@ -25,11 +25,27 @@
                     {{/each}}
                     <br>
                     </ul>
+                
                 {{> title data="Groups" big=false}}
+                
                 <ul>
                 {{#each groups}}
                     <li>
                         {{name}}
+                        <br>
+                        {{description}}
+                        <br>
+                        Members:
+                        <ul>
+                        {{#each members}}
+                            <li>
+                                <h4>{{name}}</h4>
+                                <em>{{gender}}</em> / 
+                                <em>{{age}}</em>
+                            </li>
+                            <br>
+                        {{/each}}
+                        </ul>
                     </li>
                 {{/each}}
                 </ul> 
