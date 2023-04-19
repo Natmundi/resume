@@ -1,1 +1,122 @@
-<div></div>
+<main>
+  <div>
+    {{#with heading}}
+      <div class='card'>
+        <div class='card-body'>
+          {{#with main}}
+            <h1 class='text-dark'>{{title}}</h1>
+            <p class='text-dark'>{{text}}</p>
+            {{#with button_text}}
+              <button
+                class='btn btn-primary'
+              >{{solid}}</button>
+              <br />
+              <br />
+              <button
+                class='btn btn-outline-primary btn-lg'
+              >{{outline}}</button>
+            {{/with}}
+          {{/with}}
+        </div>
+      </div>
+      <br />
+      <br />
+      <div class='card'>
+        <div class='card-body'>
+          {{#with second}}
+            <h2 class='text-dark'>{{title}}</h2>
+            <p class='text-dark'>{{text}}</p>
+            {{#with button_text}}
+              <button
+                class='btn btn-secondary'
+              >{{solid}}</button>
+              <br />
+              <br />
+              <button
+                class='btn btn-outline-secondary'
+              >{{outline}}</button>
+            {{/with}}
+          {{/with}}
+        </div>
+      </div>
+      <br />
+      <br />
+      <div class='card'>
+        <div class='card-body'>
+          {{#with subblock}}
+            <h3 class='text-dark'>{{title}}</h3>
+            <p class='text-dark'>{{text}}</p>
+            {{#with button_text}}
+              <button
+                class='btn btn-dark btn-sm'
+              >{{solid}}</button>
+              <br />
+              <br />
+              <button
+                class='btn btn-outline-dark btn-sm'
+              >{{outline}}</button>
+            {{/with}}
+          {{/with}}
+        </div>
+      </div>
+    {{/with}}
+    <br />
+    <br />
+    <div>
+      {{#with nested_display}}
+        <div class='card'>
+          <div class='card-body'>
+            <div class='display-1'>{{title}}</div>
+            <div class='card'>
+              <div class='card-body'>
+                {{#with children_display}}
+                  <div class='display-4'>{{title}}</div>
+                  <p class='text-dark'>{{text}}</p>
+                  {{#with button}}
+                    <button
+                      class='btn btn-outline-warning'
+                    >{{text}}</button>
+                  {{/with}}
+                {{/with}}
+              </div>
+            </div>
+            <br />
+            <h6 class='text-dark'>{{header_text}}</h6>
+            <br />
+            {{#with button}}
+              <button
+                class='btn btn-info text-light btn-sm'
+              >{{text}}</button>
+            {{/with}}
+          </div>
+        </div>
+      {{/with}}
+    </div>
+    <br />
+    <br />
+    {{#with paragraph}}
+      <div class='card'>
+        <div class='card-body'>
+          <p class='text-uppercase'>{{title}}</p>
+          <p class='text-lowercase'>{{text}}</p>
+          {{#with button}}
+            <a class='btn btn-link'>{{text}} {{url}}</a>
+          {{/with}}
+
+          <div class='card'>
+            <div class='card-body'>
+              <ul>
+                {{#each list_name}}
+                  <li>
+                    <a class='btn btn-link'>{{text}}
+                      {{url}}</a>
+                  </li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/with}}
+  </div>
+</main>
