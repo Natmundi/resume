@@ -1,0 +1,21 @@
+<main>
+  <div class='row'>
+    <section class='col-2'>
+      {{#with navigation}}
+
+        <ul class='list-group'>
+          {{#each links}}
+
+            <li class='list-group-item'>
+              <a
+                href='https://github.com/'
+                class='bth btn-link'
+              >{{text}}</a>
+
+            </li>
+          {{/each}}
+        </ul>
+      {{/with}}
+    </section>
+  </div>
+</main>
