@@ -1,21 +1,23 @@
 <main>
-  <div class='row'>
-    <section class='col-2'>
+  <div class='row gx-5'>
+    <section class='col-6'>
+
       {{#with navigation}}
-
-        <ul class='list-group'>
-          {{#each links}}
-
-            <li class='list-group-item'>
-              <a
-                href='https://github.com/'
-                class='bth btn-link'
-              >{{text}}</a>
-
-            </li>
-          {{/each}}
-        </ul>
+        {{#each links}}
+          <a
+            href='{{href}}'
+            class='bth btn-link'
+          >{{text}}</a>
+        {{/each}}
+        {{#with button}}
+          <a
+            href='{{href}}'
+            class='btn btn-primary'
+          >{{text}}</a>
+        {{/with}}
       {{/with}}
+
     </section>
   </div>
+
 </main>
