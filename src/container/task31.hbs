@@ -111,24 +111,56 @@
 <section>
    {{#with gallery}}
       <h2 class="text-dark">{{title}}</h2>
-        <div class="card">
-          <div class='row'>
+          <div class='row gx-3 gy-2'>
           {{#each cards}}
-          <div class='col-4'>
+          <div class='col-4 card'>
             <div class='card-header text-dark'>{{name}}</div>
-            <div class="card-body">
               <ul class="list-group">
               {{#each items}}
                 <li class='list-group-item'>{{this}}</li>
               {{/each}}
               </ul>
-            </div>
           </div>
           {{/each}}
           </div>
-        </div>
     {{/with}}
 </section>
 
+<hr>
+
+<section>
+  {{#with relaxion}}
+    <p class="display-3 text-dark">{{title}}</p>
+      <div class="row g-5 gy-3">
+        {{#each cards}}
+          <div class='card col-5  text-bg-info'>
+            <div class='card-header text-light'>{{header}}</div>
+            <div class='card-body'>
+              <h6 class='card-title text-light'>{{title}}</h6>
+                <p class="text-light">{{description}}</p>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+  {{/with}}
+</section>
+<hr>
+<section>
+  {{#with rest}}
+  <div class='row gx-6 gy-1'>
+    {{#each cards}}
+      <div class='card col-6'>
+        <div class='card-header text-center'>{{header}}</div>
+          <div class='card-body text-center'>
+            <h6 class='card-title text-dark'>{{title}}</h6>
+            <p class="text-dark text-center">{{description}}</p>
+            <button class="btn btn-primary">{{button}}</button>
+          </div>
+          <div class="card-footer text-center">{{footer}}</div>
+      </div>
+    {{/each}}
+  </div>
+  {{/with}}
+</section>
 
 </main>
