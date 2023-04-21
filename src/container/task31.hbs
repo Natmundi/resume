@@ -5,12 +5,10 @@
         
           {{#each links}}
           <div class='col-2'>
-
             <a
               href='{{href}}'
               class='bth btn-link'
             >{{text}}</a>
-
           </div>
           {{/each}}
 
@@ -22,7 +20,6 @@
             >{{text}}</a>
           </div>
           {{/with}}
-        </ul>
     </div>
     {{/with}}
   </section>
@@ -72,11 +69,66 @@
             </div>
           </div>
         </div>
-      {{/each}}
+        {{/each}}
       </div> 
     {{/with}}
-      
   </section>
+
+<hr>
+
+<section>
+    {{#with winner}}
+      <h2 class="text-dark">{{title}}</h2>
+
+      <table class='table'>
+      {{#with table}}
+      <thead>
+        <tr>
+          {{#each head}}
+            <th>
+              {{this}}
+            </th>
+          {{/each}}
+        </tr>
+      </thead>
+      <tbody>
+          {{#each user}}
+          <tr>
+            <th>{{place}}</th>
+            <td>{{name}}</td>
+            <td>{{surname}}</td>
+            <td>{{nickname}}</td>
+          </tr>
+          {{/each}}
+      </tbody>
+      {{/with}} 
+      </table>
+    {{/with}}
+</section>
+
+<hr>
+
+<section>
+   {{#with gallery}}
+      <h2 class="text-dark">{{title}}</h2>
+        <div class="card">
+          <div class='row'>
+          {{#each cards}}
+          <div class='col-4'>
+            <div class='card-header text-dark'>{{name}}</div>
+            <div class="card-body">
+              <ul class="list-group">
+              {{#each items}}
+                <li class='list-group-item'>{{this}}</li>
+              {{/each}}
+              </ul>
+            </div>
+          </div>
+          {{/each}}
+          </div>
+        </div>
+    {{/with}}
+</section>
 
 
 </main>
