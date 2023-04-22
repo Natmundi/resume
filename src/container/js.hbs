@@ -1,0 +1,48 @@
+<div>
+  <h1>{{name}}</h1>
+  <br />
+  <p><strong>{{description}}</strong></p>
+  <br />
+  <p>
+    {{#with history}}
+      {{year}}
+      /
+      Founder: {{founder}}
+    {{/with}}
+  </p>
+  <br />
+  {{> title data="Types" big=false}}
+  {{>jscomponent quality=types}}
+  <br />
+  {{> title data="Syntax" big=false}}
+    <ul>
+        {{#with syntax}}
+        
+            <li><em>Variables</em> - {{variables}}</li>
+            <li><em>Functions</em> - {{functions}}</li>
+            <li><em>Conditionals</em> - {{conditionals}}</li>
+            <li><em>Loops</em> - {{loops}}</li>
+            <li><em>Classes</em> - {{classes}}</li>
+        </li>
+        {{/with}}
+    </ul>
+  <br>
+  {{> title data="Features" big=false}}
+   {{>jscomponent quality=features}}
+  <br>
+  {{> title data="Libraries" big=false}}
+    {{>jscomponent quality=libraries}}
+  <br>
+   {{> title data="Tools" big=false}}
+   {{>jscomponent quality=tools}}
+  <br>
+  {{> title data="Community" big=false}}
+    <ul>
+        {{#each community}}
+        <li>
+            {{name}} / {{type}}
+        </li>
+        {{/each}}
+    </ul>
+
+</div>

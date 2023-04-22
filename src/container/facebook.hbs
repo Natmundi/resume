@@ -1,0 +1,29 @@
+<div>
+  <h1>{{name}}</h1>
+  <section>
+    {{#each users}}
+      {{> persface}}
+        {{> title data="Friends" big=false}}
+        <ul>
+            {{#each friends}}
+            <li>
+                {{> persface}}
+                <br>
+                {{> title data="Mutual friends" big=false}}
+                    <ul> 
+                    {{#each mutual_friends}}
+                        <li>
+                            {{> persface}}
+                        </li>
+                    {{/each}}
+                    <br>
+                    </ul>
+               {{> groupfaceb}}
+            </li>
+            {{/each}}
+        </ul>
+        {{> groupfaceb}}
+    {{/each}}
+    <br>
+  </section>
+</div>
