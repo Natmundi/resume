@@ -167,6 +167,69 @@
 <hr>
 
 <section>
+  {{#with proposition}}
+    <p class="display-2 text-dark">{{title}}</p>
+    <br>
+      <div class="row">
+        {{#each card}}
+        <div class="card m-2 col-5 text-bg-warning">
+          <div class='card-header text-light'>{{header}}</div>
+          <div class="card-body">
+            <h6 class="text-light">{{title}}</h6>
+            <p class="text-light">{{description}}</p>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+  {{/with}}
+</section>
+
+<hr>
+
+<section>
+    {{#with footer}}
+    <div class="display-5">{{title}}</div>
+    <br>
+      <div class="row g-3">
+        <div class="card col-3">
+          <ul class="list-group">
+            {{#each navigation}}
+              
+                <li class="list-group-item">
+                    <a href='{{href}}' class="btn btn-link"
+                        >{{text}}</a>
+                </li> 
+            
+            {{/each}}
+          </ul>
+        </div>
+
+        <div class="card col-3">
+          <ul class="list-group">
+            {{#each socialMedia}}
+              
+                <li class="list-group-item">
+                  <a  href="{{link}}" class="btn btn-outline-dark">{{name}}</a>
+                </li>
+
+            {{/each}}
+          </ul>
+        </div>
+
+        <div class="card col-3">
+          <ul class="list-group">
+            {{#each partners}}
+              
+                <li class="list-group-item">
+                 <a href="{{link}}" class="btn btn-outline-primary">{{name}}</a>
+                </li>
+
+            {{/each}}
+          </ul>
+        </div>
+
+   </div> 
+  {{/with}}
 
 </section>
 
