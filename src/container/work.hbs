@@ -5,21 +5,21 @@
 
 
 {{#with main}}
-    <main>
-        <section>
-            <div>
+    <main class="m-5">
+        <section class="ms-5">
+            <div class="m-5">
                 {{> title data="Work history" big=true}}
             </div>
-            <div>src/container/work.hbs
-                <ul>
+            <div class="my-5">
+                <ul class="my-5">
                     {{#each works}}
                     
                     <li>
-                        <div>{{position}}</div>
+                        <div class="my-5">{{position}}</div>
                         
-                        <br>
                         
-                        <div>
+                        
+                        <div class="my-5">
                             
                             {{duration.from}} - 
                             {{#if duration.to}} 
@@ -30,9 +30,9 @@
                         
                         </div>
                         
-                        <br>
                         
-                        <div>
+                        
+                        <div class="my-5">
                             {{#if company.url}}
                                 {{> link text=company.name href=company.url blank=true noLine=true}}
                             {{else}}
@@ -40,35 +40,34 @@
                             {{/if}}
                         </div>
                             
-                        <br>
-                        <br>
                         
-                        <div><strong> Projects ({{projectAmount}}) </strong></div>
+                        
+                        <div class="my-5"><strong> Projects ({{projectAmount}}) </strong></div>
 
-                        <br>
+                        
 
-                        <ul>
+                        <ul class="m-5">
                             {{#each projects}}
                             <li>
-                                <div>
+                                <div class="m-5">
 
                                     {{> link text=name href=url blank=true noLine=true}}
                                 
-                                <br>
                                 
-                                <div>
+                                
+                                <div class="m-5">
                                     <p>{{about}}</p>
                                 </div>
                                 
-                                <br>
+                               
                                 
-                                <div>
+                                <div class="m-5">
                                     <em>Project stacks ({{stackAmount}})</em>
                                 </div>
                                 
-                                <br>
+                              
                                 
-                                <div>
+                                <div class="my-5">
                                     <ul>
                                         {{#each stacks}}
                                         
@@ -83,13 +82,13 @@
                                 
                                 <br>
                                 
-                                <div>
+                                <div class="my-5">
                                     <em>Project awards ({{awardAmount}})</em>
                                 </div>
                                 
                                 <br>
                                 
-                                <div>
+                                <div class="my-5">
                                     <ul>
                                         {{#each awards}}
                                         <li>

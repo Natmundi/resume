@@ -4,29 +4,34 @@
 }}
 
 <html>
+  <main class="p-5">
+    <head>
+      <title>
+        {{page.title}}
+      </title>
+      <meta charset='utf-8' />
+      <link href='css/index.css' rel='stylesheet' />
+    </head>
 
-  <head>
-    <title>
-      {{page.title}}
-    </title>
-    <meta charset='utf-8' />
-    <link href='css/index.css' rel='stylesheet' />
-  </head>
+    <body class="p-5">
+      <div class="mt-5">
+        {{> nav}}
+      </div>
+    
+    <hr class="my-5">
 
-  <body>
-		{{> nav}}
+      {{!  ↓  ця кострукція показує куди шаблонізатору треба вставляти код з container файлу   }}
+      {{{body}}}
 
-	<br>
-	<hr>
+    
+    <hr class="my-5">
 
-    {{!  ↓  ця кострукція показує куди шаблонізатору треба вставляти код з container файлу   }}
-    {{{body}}}
+    <div class="my-3">
+      {{> footer}}
+    </div>
 
-	<br>
-	<hr>
-
-	{{> footer}}
-
-  </body>
+    </body>
+    
+</main>
 
 </html>
