@@ -126,19 +126,38 @@
         <div class="card text-bg-dark p-2">
             <h2>{{header}}</h2>
             <p>{{description}}</p>
-            {{#each buttons}}
-               <a href="{{link}}">
-               <span class="badge text-bg-primary m-2 p-1">{{text}}</span>
-                </a>
-            {{/each}}
+            
+                {{#each buttons}}
+                <div class="col-3">
+                        <a class='btn btn-primary mb-2 ms-0' href="{{link}}">{{text}}</a>
+                </div>
+                {{/each}}
+
         </div>
         
     {{/with}}
     </div>
   </sector>
-
+  
   <sector class="ms-0 my-5 p-5">
-
+     <div class='col-12 text-center'>
+    {{#with service}}
+        
+        <div class="card text-bg-success text-center">
+            <div class='card-body'>
+            <h2 class='card-title'>{{title}}</h2>
+            <p>{{description}}</p>
+            
+                {{#each buttons}}
+                <div class="text-center mb-3">
+                        <a class='btn btn-primary text-center' href="{{link}}">{{text}}</a>
+                </div>
+                {{/each}}
+            </div>    
+        </div>
+        
+    {{/with}}
+    </div>
   </sector>
 
 </main>
