@@ -1,5 +1,5 @@
 <main>
-  <sector>
+  <sector class="m-5 p-5">
     <div class='mb-3'>
       {{#with navigation}}
         <div class='nav nav-tabs'>
@@ -22,7 +22,7 @@
     </div>
   </sector>
 
-  <sector class='m-5'>
+  <sector class='m-5 p-5'>
     {{#with newsBlock}}
       <h1 class='text-capitalize text-center'>{{title}}</h1>
       <div class='row'>
@@ -30,7 +30,9 @@
           <div class='col-3'>
             <div class='card m-1 p-2 text-bg-dark'>
               <div class='card-body'>
-                <h6 class='card-title'>{{title}}
+                <h6 class='card-title'>
+
+                  {{title}}
 
                   {{#if isTop}}
                     <span
@@ -50,8 +52,93 @@
             </div>
           </div>
         {{/each}}
-
       </div>
     {{/with}}
   </sector>
+
+  <sector class=' ms-0 my-5 p-5'>
+    
+      {{#with goodsBlock}}
+
+        <div class='nav nav-tabs m-5'>
+          {{#each tabs}}
+            <div class='nav-item'>
+              {{#if isDisabled}}
+                <h6
+                  class='nav-link disabled text-secondary'
+                >{{text}}</h6>
+              {{else}}
+                {{#if isActive}}
+                  <h6 class='nav-link active'>{{text}}</h6>
+                {{else}}
+                  <h6 class='nav-link'>{{text}}</h6>
+                {{/if}}
+              {{/if}}
+            </div>
+          {{/each}}
+
+       <div class="row m-4 ms-0 p-2">
+        
+          {{#each cards}}
+          <div class="col-4">
+            <div class='card text-bg-light'>
+                        <img
+                class='card-img-top'
+                src='{{image}}'
+                alt='Photo img'
+                />
+                    <div class="card-body">
+                    
+                        <h6 class="card-title text-dark"> 
+                                {{title}}
+
+                        {{#if isHot}}
+                            <span
+                            class='badge text-bg-warning rounded-pill'
+                            >Hot!</span>
+                        {{/if}}
+
+                        {{#if isNew}}
+                            <span
+                            class='badge text-bg-primary rounded-pill'
+                            >New!</span>
+                        {{/if}}
+
+                        </h6>
+                        <p class="text-dark">{{description}}</p>
+                        
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        
+        </div>   
+
+        </div>
+      {{/with}}
+    </div>
+  </sector>
+
+  <sector class="ms-0 my-5 p-5">
+    <div class='col-12'>
+    {{#with subscribe}}
+        
+        <div class="card text-bg-dark p-2">
+            <h2>{{header}}</h2>
+            <p>{{description}}</p>
+            {{#each buttons}}
+               <a href="{{link}}">
+               <span class="badge text-bg-primary m-2 p-1">{{text}}</span>
+                </a>
+            {{/each}}
+        </div>
+        
+    {{/with}}
+    </div>
+  </sector>
+
+  <sector class="ms-0 my-5 p-5">
+
+  </sector>
+
 </main>
