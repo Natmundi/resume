@@ -667,7 +667,7 @@ router.get('/program', function (req, res) {
   })
 })
 
- facebook
+// facebook
 router.get('/facebook', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -819,6 +819,11 @@ router.get('/facebook', function (req, res) {
             ],
           },
         ],
+      },
+    ],
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
 
 mac
 router.get('/mac', function (req, res) {
@@ -915,8 +920,6 @@ router.get('/car', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('car', {
-    layout: 'basic',
-
     make: 'Toyota',
     model: 'Camry',
     year: 2022,
@@ -1005,7 +1008,9 @@ router.get('/car', function (req, res) {
       },
       total: 28990,
     },
-
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
 
 router.get('/js', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -1081,14 +1086,12 @@ router.get('/js', function (req, res) {
       {
         name: 'CSS-Tricks',
         type: 'blog',
- master
+        master,
       },
     ],
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
- facebook
-
 
 router.get('/bootstrap', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -1096,12 +1099,10 @@ router.get('/bootstrap', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('bootstrap', {
     layout: 'bootstrap',
- master
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
- task21
 router.get('/task21', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -1172,6 +1173,7 @@ router.get('/task21', function (req, res) {
 })
 
 shophome
+shophome
 router.get('/shophome', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -1180,6 +1182,8 @@ router.get('/shophome', function (req, res) {
     layout: 'shop',
 
  task31
+
+ master
 router.get('/task31', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -1697,8 +1701,10 @@ router.get('/task31', function (req, res) {
         },
       ],
     },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
 
-task22
 router.get('/task22', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -1754,10 +1760,11 @@ router.get('/task22', function (req, res) {
         },
       },
     },
-master
+    master,
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
+ shophome
 
 task31
 
@@ -1773,3 +1780,5 @@ master
  master
 // Підключаємо роутер до бек-енду
 module.exports = router
+
+ master
