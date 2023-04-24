@@ -1485,4 +1485,42 @@ router.get('/task22', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
+
+router.get('/list', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('list', {
+    list: [
+      { name: 'First button' },
+      { name: 'Secondary button' },
+      { name: 'Error button' },
+      { name: 'Submit button' },
+    ],
+
+    user: {
+      name: 'Taras',
+      role: 'Admin',
+      isConfirm: 'true',
+      age: 32,
+    },
+
+    users: {
+      name: {
+        value: 'Katerina',
+        text: 'Panasenko',
+      },
+      role: {
+        value: 'Admin',
+      },
+      isConfirm: {
+        value: 'true',
+      },
+      age: {
+        value: '35',
+      },
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
 module.exports = router
