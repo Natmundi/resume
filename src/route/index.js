@@ -1172,8 +1172,8 @@ router.get('/task21', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
-shophome
-shophome
+// shophome
+// shophome
 router.get('/shophome', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -1181,16 +1181,16 @@ router.get('/shophome', function (req, res) {
   res.render('shophome', {
     layout: 'shop',
 
- task31
+//  task31
 
- master
+//  master
 router.get('/task31', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task31', {
     layout: 'basic',
- master
+//  master
     navigation: {
       links: [
         {
@@ -1206,7 +1206,7 @@ router.get('/task31', function (req, res) {
           href: 'https://www.youtube.com/',
         },
       ],
- shophome
+//  shophome
     },
 
     newsBlock: {
@@ -1760,25 +1760,25 @@ router.get('/task22', function (req, res) {
         },
       },
     },
-    master,
+    // master,
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
- shophome
+//  shophome
 
-task31
+// task31
 
 
- car
- master
- master
-master
-master
- master
-master
- master
- master
+//  car
+//  master
+//  master
+// master
+// master
+//  master
+// master
+//  master
+//  master
 // Підключаємо роутер до бек-енду
 module.exports = router
 
- master
+//  master
