@@ -28,34 +28,7 @@
  <sector class='my-3 p-2'>
     {{#with newsOtherBlock}}
       <h3 class='text-capitalize text-center'>{{title}}</h3>
-      <div class='row'>
-        {{#each cards}}
-          <div class='col-3'>
-            <div class='card text-bg-dark'>
-              <div class='card-body'>
-                <h6 class='card-title'>
-
-                  {{title}}
-
-                  {{#if isTop}}
-                    <span
-                      class='badge text-bg-danger rounded-pill'
-                    >Top!</span>
-                  {{/if}}
-
-                  {{#if idNew}}
-                    <span
-                      class='badge text-bg-success rounded-pill'
-                    >New!</span>
-                  {{/if}}
-
-                </h6>
-                <p>{{description}}</p>
-              </div>
-            </div>
-          </div>
-        {{/each}}
-      </div>
+      {{> shoppost}}
     {{/with}}
   </sector>
   <hr>
