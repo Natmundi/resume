@@ -1,21 +1,5 @@
 <main class='p-5'>
-<sector class="my-1">
-    <div class="col-12">
-        <ol class="breadcrumb">
-        {{#each breadcrumb}}
-        
-            <li class="breadcrumb-item">
-                {{#if url}}
-                    <a  href="{{url}}">{{name}}</a>
-                {{else}}
-                    {{name}}
-                {{/if}}
-            </li>
-          
-        {{/each}}
-        </ol>
-    </div>
-</sector>
+{{> breadcrumb}}
 
 <sector class="my-3">
     <div class="row g-2">
@@ -129,7 +113,7 @@
 <hr>
 <sector class="my-5">
     {{#with goodsOtherBlock}}
-        <h2 class="text-center">{{title}}</h2>
+        <h3 class="text-center">{{title}}</h3>
         <div class="row">
             {{#each cards}}
                {{>shopcard}}
