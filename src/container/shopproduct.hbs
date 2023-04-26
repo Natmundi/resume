@@ -72,11 +72,9 @@
                     <tbody>
                         {{#each body}}
                         <tr>
-                            {{#with this}} 
-                                <th>{{this.[0]}}</th>
-                                <td>{{this.[1]}}</td>
-                                <td>{{this.[2]}}</td>
-                            {{/with}}
+                            {{#each this}} 
+                                <td>{{this}}</td>
+                            {{/each}}
                         </tr>
                         {{/each}}
                     </tbody>
