@@ -133,7 +133,7 @@
           {{/with}}
         </div>
         <hr>
-        <div class="row">
+        <div class="row p-2">
             {{#with coment}}
                 <label class="form-label">{{label}}</label>
                 <input class="form-input" placeholder="{{placeholder}}">
@@ -141,10 +141,113 @@
         </div>
       {{/with}}
     <hr>
-    {{#with coupon}}
-    <h4 class='text-dark'>{{title}}</h4>
-    {{/with}}
+      {{#with coupon}}
+        <h4 class='text-dark'>{{title}}</h4>
+        {{#with select}}
+          {{#with availabel_coupon}}
+          <div class="row my-2">
+            <label
+                    class='form-label'
+                  >{{label}}</label>
+                  <select class='form-select form-select-lg'>
+                    <option
+                      selected
+                    >{{placeholder}}</option>
+                    {{#each options}}
+                      <option
+                        value='{{value}}'
+                      >{{text}}</option>
+                    {{/each}}
+                  </select>
+          </div>
+          {{/with}}
 
+          {{#with friend_coupon}}
+          <div class="row my-2">
+            <label
+                    class='form-label'
+                  >{{label}}</label>
+                  <select class='form-select'>
+                    <option
+                      selected
+                    >{{placeholder}}</option>
+                    {{#each options}}
+                      <option
+                        value='{{value}}'
+                      >{{text}}</option>
+                    {{/each}}
+                  </select>
+          </div>
+          {{/with}}
+
+        {{/with}}
+      
+        {{#with add}}
+          <div class="row my-2">
+            {{#with friend}}
+              <label class="form-label">{{label}}</label>
+              <input class="form-control form-control-lg" placeholder="{{placeholder}}">
+              <div class="form-text">{{caption}}</div>
+            {{/with}}
+            {{#with colleague}}
+              <label class="form-label">{{label}}</label>
+              <input class="form-control" placeholder="{{placeholder}}">
+              <div class="form-text">{{caption}}</div>
+            {{/with}}
+          </div>
+        {{/with}}
+      
+      {{/with}}
+      <hr>
+      {{#with quiz}}
+      <div class="row my-2">
+        <h4 class='text-dark'>{{title}}</h4>
+        {{#with preference}}
+        <h6 class="text-dark">{{title}}</h6>
+          {{#each options}}
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="options">
+              <label class="check-label">{{this}}</label>
+            </div>
+          {{/each}}
+        {{/with}}
+        
+        <div class="col  ms-1 my-1 pt-2">
+          {{#with your_expirience}}
+          <label class="form-label">{{label}}</label>
+          <input class="form-control">
+          {{/with}}
+        </div>
+        
+        {{#with purchase_frequency}}
+          <div class="row ms-1">
+          <label
+                    class='form-label'
+                  >{{label}}</label>
+                  <select class='form-select'>
+                    <option
+                      selected
+                    >{{placeholder}}</option>
+                    {{#each options}}
+                      <option
+                        value='{{value}}'
+                      >{{text}}</option>
+                    {{/each}}
+                  </select>
+          </div>
+        {{/with}}
+
+        {{#with factors}}
+          <p>{{title}}</p>
+            {{#each options}}
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox">
+                <label class="check-label">{{this}}</label>
+              </div>
+            {{/each}}
+        {{/with}}
+      </div>
+      {{/with}}
     </div>
 
     <div class='col-4'>
