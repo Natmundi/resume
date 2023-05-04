@@ -1,3 +1,69 @@
-<main class='p-5'>
+<main class='p-2'>
+  <div class='display-5 my-3'><strong
+    >{{header}}</strong></div>
+  <sector class='my-3'>
+    <div class='row'>
+      {{#with purchase}}
+        <div class='col-12'>
+          <div class='nav nav-tabs'>
+            {{#each tabs}}
+              <div class='nav-item'>
+                {{#if @first}}<a
+                    href='#'
+                    class='nav-link active'
+                  ><strong>{{this}}</strong></a>
+                {{else}}
+                  <a href='#' class='nav-link'>{{this}}</a>
+                {{/if}}
+              </div>
+            {{/each}}
+          </div>
+        </div>
+        <div class='card p-2 my-2'>
+          {{#with actionBlock}}
+            <div class='card-body ps-0 pt-0 pb-0'>
+              {{#with input}}
+                <button
+                  class='btn btn-outline-secondary text-secondary'
+                >{{placeholder}}</button>
+              {{/with}}
+              {{#each buttons}}
+                {{#if isSuccess}}
+                  <a
+                    href='{{link}}'
+                    class='btn btn-success'
+                  >{{text}}</a>
+                {{/if}}
+                {{#if isOutline}}
+                  <a
+                    href='{{link}}'
+                    class='btn btn-outline-success'
+                  >{{text}}</a>
+                {{/if}}
+                {{#if isDanger}}
+                  <a
+                    href='{{link}}'
+                    class='btn btn-outline-danger'
+                  >{{text}}</a>
+                {{/if}}
+              {{/each}}
+            </div>
+          {{/with}}
+        </div>
+        <hr />
+        <sector class='my-3'>
+          <div class='card'>
+            {{#each itemList}}
+              {{#with itemList}}
+                <div class='card-body'>
+
+                </div>
+              {{/with}}
+            {{/each}}
+          </div>
+        </sector>
+      {{/with}}
+    </div>
+  </sector>
 
 </main>
