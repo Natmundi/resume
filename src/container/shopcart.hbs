@@ -1,0 +1,71 @@
+<main class='ps-0'>
+  <sector class='my-5'>
+    <div class='row'>
+      {{#with header}}
+        <h2 class='text-dark'>{{title}}</h2>
+        {{#with button}}
+          <div class='col-4 my-3 mb-3'>
+            <a
+              href='{{link}}'
+              class='btn btn-outline-secondary'
+            >{{text}}</a>
+          </div>
+        {{/with}}
+      {{/with}}
+    </div>
+  </sector>
+  <hr />
+  <sector class="my-5">
+  {{#each goodsBlock}}
+    {{> cartGoodsItem}}
+  {{/each}}
+  </sector>
+  <hr />
+  <sector class="my-5">
+  <div class='row p-1'>
+    {{#with total}}
+      <h3 class='text-dark'><strong>{{title}}</strong></h3>
+      <div class='display-6'><strong
+        >{{amount}}</strong></div>
+      <p>{{delivery}}</p>
+      {{#each buttons}}
+        <div class='row'>
+          <div class='col-5 my-2'>
+            {{#if isSuccess}}
+              <a
+                href='{{link}}'
+                class='btn btn-success'
+              >{{text}}</a>
+            {{/if}}
+            {{#if isOutline}}
+              <a
+                href='{{link}}'
+                class='btn btn-outline-success'
+              >{{text}}</a>
+            {{/if}}
+          </div>
+        </div>
+      {{/each}}
+    {{/with}}
+  </div>
+  </sector>
+  <hr />
+  <sector class='my-5'>
+    {{#with goodsOtherBlock}}
+      <h3 class='text-dark text-center'><strong
+        >{{title}}</strong></h3>
+      <div class='row'>
+        {{#each cards}}
+          {{> shopcard}}
+        {{/each}}
+      </div>
+    {{/with}}
+  </sector>
+  <hr>
+  <sector class="my-5">
+    {{#with subscribe}}
+      {{> subscribecart}}
+    {{/with}}
+  </sector>
+
+</main>

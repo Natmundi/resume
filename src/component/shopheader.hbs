@@ -1,0 +1,17 @@
+<div class='mb-3'>
+  {{#with navigation}}
+    <div class='nav nav-tabs'>
+      {{#each links}}
+        <div class='nav-item'>
+          <a
+            href='{{href}}'
+            class='text-primary nav-link'
+          >{{text}}</a>
+        </div>
+      {{/each}}
+      <div class='nav-item'>
+        <a href='#' class='nav-link disabled'>Disabled</a>
+      </div>
+    </div>
+  {{/with}}
+</div>
