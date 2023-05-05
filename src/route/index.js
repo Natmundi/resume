@@ -1487,8 +1487,8 @@ router.get('/task22', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-<<<<<<< HEAD
-=======
+// <<<<<<< HEAD
+// =======
 
 router.get('/list', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -1528,7 +1528,7 @@ router.get('/list', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
->>>>>>> 25a516280a6e51f57d04b21899724077cf73d915
+// >>>>>>> 25a516280a6e51f57d04b21899724077cf73d915
 router.get('/shophome', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -1814,7 +1814,7 @@ router.get('/shophome', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-<<<<<<< HEAD
+// <<<<<<< HEAD
 //  shophome
 
 // task31
@@ -1829,7 +1829,7 @@ router.get('/shophome', function (req, res) {
 //  master
 //  master
 // Підключаємо роутер до бек-енду
-=======
+// =======
 
 router.get('/shopproduct', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -2495,7 +2495,8 @@ router.get('/shopcart', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
->>>>>>> 25a516280a6e51f57d04b21899724077cf73d915
+
+// >>>>>>> 25a516280a6e51f57d04b21899724077cf73d915
 module.exports = router
 
 //  master
