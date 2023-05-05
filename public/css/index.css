@@ -1,4 +1,28 @@
 html {
+ shophome
+  max-width: 1000px;
+shophome
+
+}
+
+body {
+  margin: 32px;
+  background: #fff;
+}
+
+main,
+header,
+footer,
+nav {
+  margin: 32px;
+}
+
+section {
+  padding: 16px;
+ master
+}
+=======
   max-width: 720px;
 }
 
+ master
