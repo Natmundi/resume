@@ -67,7 +67,7 @@ router.get('/summary', function (req, res) {
     },
 
     // ↙ сюди вводимо JSON данні
-    footer,
+    // footer,
   })
 })
 
@@ -135,7 +135,7 @@ router.get('/skills', function (req, res) {
       ],
     },
 
-    footer,
+    // footer,
   })
 })
 
@@ -188,7 +188,7 @@ router.get('/education', function (req, res) {
     },
 
     // ↙ сюди вводимо JSON данні
-    footer,
+    // footer,
   })
 })
 
@@ -250,7 +250,7 @@ router.get('/work', function (req, res) {
     },
 
     // ↙ сюди вводимо JSON данні
-    footer,
+    //
   })
 })
 
