@@ -667,7 +667,6 @@ router.get('/program', function (req, res) {
   })
 })
 
-
 router.get('/js', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -758,6 +757,6 @@ router.get('/bootstrap', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
- master
+//  master
 // Підключаємо роутер до бек-енду
 module.exports = router
