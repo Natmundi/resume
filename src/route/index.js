@@ -250,6 +250,9 @@ router.get('/work', function (req, res) {
     },
 
     // ↙ сюди вводимо JSON данні
+
+    // footer,
+
     //
   })
 })
@@ -1012,6 +1015,7 @@ router.get('/car', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
+
 router.get('/js', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -1102,6 +1106,9 @@ router.get('/bootstrap', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
+
+
+
 
 router.get('/task21', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -1483,12 +1490,12 @@ router.get('/task22', function (req, res) {
         },
       },
     },
-    // master,
+    
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-// <<<<<<< HEAD
-// =======
+
+
 
 router.get('/list', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -1528,7 +1535,7 @@ router.get('/list', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
-// >>>>>>> 25a516280a6e51f57d04b21899724077cf73d915
+
 router.get('/shophome', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -2500,3 +2507,4 @@ router.get('/shopcart', function (req, res) {
 module.exports = router
 
 //  master
+ 
