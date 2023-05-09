@@ -1015,7 +1015,6 @@ router.get('/car', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
-
 router.get('/js', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -1090,7 +1089,6 @@ router.get('/js', function (req, res) {
       {
         name: 'CSS-Tricks',
         type: 'blog',
-        master,
       },
     ],
   })
@@ -1106,9 +1104,6 @@ router.get('/bootstrap', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-
-
-
 
 router.get('/task21', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -1490,12 +1485,9 @@ router.get('/task22', function (req, res) {
         },
       },
     },
-    
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-
-
 
 router.get('/list', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -1534,7 +1526,6 @@ router.get('/list', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-
 
 router.get('/shophome', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -2507,4 +2498,3 @@ router.get('/shopcart', function (req, res) {
 module.exports = router
 
 //  master
- 
