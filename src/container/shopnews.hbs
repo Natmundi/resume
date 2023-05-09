@@ -1,0 +1,40 @@
+<main class='p-5'>
+ {{> breadcrumb}}
+ <sector class="my-3 me-0">
+    <div class="row">
+    {{#with newsData}}
+        <div class="col-12">
+            <div class="card">
+                 <img class='card-img-top'
+                    src='{{photo}}'
+                        alt='Photo img'/>
+                <div class="card-body">
+                    {{#with head}}
+                        <h2 class="card-title">{{heading}}</h2>
+                        <p class="text-dark">{{description}}</p>
+                    {{/with}}
+                
+                    {{#each body}}
+                        <h4 class="card-title">{{title}}</h6>
+                        <p class="text-dark">{{text}}</p>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    {{/with}}
+    </div>
+ </sector>
+ <hr>
+ <sector class='my-3 p-2'>
+    {{#with newsOtherBlock}}
+      <h3 class='text-capitalize text-center'>{{title}}</h3>
+      {{> shoppost}}
+    {{/with}}
+  </sector>
+  <hr>
+  <sector class="my-3">
+    {{#with service}}
+        {{> shopaction}}
+    {{/with}}
+  </sector>
+</main>
