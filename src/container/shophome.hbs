@@ -1,40 +1,9 @@
 <main>
-  <sector class="m-5 p-5">
-   {{> shopheader}}
-  </sector>
+  <sector class="m-5 p-5"></sector>
 
   <sector class='m-5 p-5'>
     {{#with newsBlock}}
       <h1 class='text-capitalize text-center'>{{title}}</h1>
-
-      <div class='row'>
-        {{#each cards}}
-          <div class='col-3'>
-            <div class='card m-1 p-2 text-bg-dark'>
-              <div class='card-body'>
-                <h6 class='card-title'>
-
-                  {{title}}
-
-                  {{#if isTop}}
-                    <span
-                      class='badge text-bg-danger rounded-pill'
-                    >Top</span>
-                  {{/if}}
-
-                  {{#if isNew}}
-                    <span
-                      class='badge text-bg-success rounded-pill'
-                    >New</span>
-                  {{/if}}
-
-                </h6>
-                <p>{{description}}</p>
-              </div>
-            </div>
-          </div>
-        {{/each}}
-      </div>
 
       {{> shoppost}}
 
@@ -62,7 +31,7 @@
             </div>
           {{/each}}
 
-       <div class="row g-2">
+       <div class="row g-2 my-5">
         
           {{#each cards}}
           <div class="col-4">
@@ -107,21 +76,7 @@
   <sector class="ms-0 my-5 p-5">
     <div class='col-12'>
     {{#with subscribe}}
-
-        
-        <div class="card text-bg-dark p-2">
-            <h2>{{header}}</h2>
-            <p>{{description}}</p>
-            
-                {{#each buttons}}
-                <div class="col-3">
-                        <a class='btn btn-primary mb-2 ms-0' href="{{link}}">{{text}}</a>
-                </div>
-                {{/each}}
-
-        </div>
-        
-
+       
        {{> subscribecart}}
 
     {{/with}}
