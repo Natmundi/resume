@@ -1,25 +1,6 @@
 <main>
   <sector class="m-5 p-5">
-    <div class='mb-3'>
-      {{#with navigation}}
-        <div class='nav nav-tabs'>
-          {{#each links}}
-            <div class='nav-item'>
-              <a
-                href='{{href}}'
-                class='text-primary nav-link'
-              >{{text}}</a>
-            </div>
-          {{/each}}
-          <div class='nav-item'>
-            <a
-              href='#'
-              class='nav-link disabled'
-            >Disabled</a>
-          </div>
-        </div>
-      {{/with}}
-    </div>
+   {{> shopheader}}
   </sector>
 
   <sector class='m-5 p-5'>
