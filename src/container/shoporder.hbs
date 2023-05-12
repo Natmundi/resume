@@ -141,6 +141,7 @@
         </div>
       {{/with}}
     <hr>
+    <sector class="my-5">
       {{#with coupon}}
         <h4 class='text-dark'>{{title}}</h4>
         {{#with select}}
@@ -198,9 +199,11 @@
         {{/with}}
       
       {{/with}}
+      </sector>
       <hr>
+      <sector class="my-5">
       {{#with quiz}}
-      <div class="row my-2">
+      <div class="row my-3">
         <h4 class='text-dark'>{{title}}</h4>
         {{#with preference}}
         <h6 class="text-dark">{{title}}</h6>
@@ -236,16 +239,18 @@
                   </select>
           </div>
         {{/with}}
-
-        {{#with factors}}
-          <p>{{title}}</p>
-            {{#each options}}
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox">
-                <label class="check-label">{{this}}</label>
-              </div>
-            {{/each}}
-        {{/with}}
+        </sector>
+        <sector class="my-5">
+          {{#with factors}}
+            <p>{{title}}</p>
+              {{#each options}}
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox">
+                  <label class="check-label">{{this}}</label>
+                </div>
+              {{/each}}
+          {{/with}}
+        </sector>
       </div>
       {{/with}}
     </div>
@@ -311,6 +316,5 @@
         {{/with}}
       </div>
     </div>
-
   </div>
 </main>
