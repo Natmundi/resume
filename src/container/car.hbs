@@ -2,15 +2,15 @@
   <h1>{{make}} {{model}} ({{year}})</h1>
   
   <p>Color: {{color}}</p>
-  <hr />
+  <hr  class="my-5"/>
   <section>
     {{> title data="Features" big=true}}
-    <ul>
+    <ul class="ms-3">
         {{#with features}}
-        <section>
+        <section class="my-3">
             <li>
                 {{> title data="Interior" big=false}}
-                <ul>
+                <ul class="ms-3">
                 {{#with interior}}
                     <li>
                         Seats:{{#with seats}}
@@ -41,10 +41,10 @@
                 </ul>
             </li> 
         </section>
-        <section>
+        <section class="my-3">
             <li>
                 {{> title data="Exterior" big=false}}
-                 <ul>
+                 <ul class="ms-3">
                 {{#with exterior}}
                     <li>
                         Wheels: {{#with wheels}}
@@ -67,10 +67,10 @@
                 </ul>
             </li>
         </section>
-        <section>
+        <section class="my-3">
             <li>
                 {{> title data="Safety" big=false}} 
-                 <ul>
+                 <ul class="ms-3">
                 {{#with safety}}
                     <li>
                         Airbags: {{#with airbags}}
@@ -97,9 +97,9 @@
         {{/with}}
     </ul>
     </section>
-    <section>
+    <section class="my-3">
         {{> title data="Engine" big=true}}  
-            <ul>
+            <ul class="ms-3">
             {{#with engine}}
                 <li>
                     Type: {{type}} 
@@ -126,9 +126,9 @@
                 </li>
             </ul>
     </section>
-    <section>
+    <section class="my-3">
         {{> title data="Price" big=true}} 
-        <ul>
+        <ul class="ms-3">
             {{#with price}}
             <li>
                 Base: {{base}}
@@ -136,7 +136,7 @@
             <li>
                 Destination: {{destination}}
             </li>
-                <ul>
+                <ul class="ms-3">
                 <em>Options: {{#with options}}</em>
                     <li>
                     Navigation: {{navigation}}
@@ -156,8 +156,4 @@
          </ul>        
     </section>
             
-            
-              
-
-
 </div>
