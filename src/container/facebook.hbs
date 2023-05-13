@@ -1,22 +1,23 @@
 <div>
   <h1>{{name}}</h1>
-  <section>
+  <section class="my-5">
+    <div class="ms-3">
     {{#each users}}
       {{> persface}}
         {{> title data="Friends" big=false}}
-        <ul>
+        <ul class="ms-3">
             {{#each friends}}
             <li>
                 {{> persface}}
-                <br>
+                
                 {{> title data="Mutual friends" big=false}}
-                    <ul> 
+                    <ul class="ms-3"> 
                     {{#each mutual_friends}}
                         <li>
                             {{> persface}}
                         </li>
                     {{/each}}
-                    <br>
+                    
                     </ul>
                {{> groupfaceb}}
             </li>
@@ -24,6 +25,7 @@
         </ul>
         {{> groupfaceb}}
     {{/each}}
-    <br>
+    </div>
+    
   </section>
 </div>

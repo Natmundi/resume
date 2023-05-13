@@ -1,6 +1,7 @@
+            <div class="my-4">
             {{#if groups}}
                 {{> title data="Groups" big=false}}
-                <ul>
+                <ul class="ms-3">
                     {{#each groups}}
                     <li>
                         {{name}}
@@ -8,7 +9,7 @@
                         {{description}}
                         <br>
                         Members:
-                        <ul>
+                        <ul class="ms-3">
                         {{#each members}}
                             <li>
                                 <h4>{{name}}</h4>
@@ -23,3 +24,4 @@
                     {{/each}}
                 </ul> 
             {{/if}}
+            </div>
