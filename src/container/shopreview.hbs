@@ -109,22 +109,13 @@
       </div>
     {{/with}}
     <hr>
-        {{#each reviewList}}
-            {{> reviewItem}}
-        {{/each}}
-        <hr>
-        <div class="col-12 p-0">
-            <div class="card text-bg-success">
-                {{#with service}}
-                <div class="card-body text-center">
-                    <h2 class="text-center">{{title}}</h2>
-                    <p class="text-center">{{description}}</p>
-                    {{#each buttons}}
-                    <a href="link" class="btn btn-primary">{{text}}</a>
-                    {{/each}}
-                </div>
-                {{/with}}
-            </div>
-        </div>
+    {{#each reviewList}}
+        {{> reviewItem}}
+    {{/each}}
+      <div class="col-12 p-0">
+        {{#with service}}
+          {{> shopaction}}
+        {{/with}}
+      </div>
   </div>
 </main>
