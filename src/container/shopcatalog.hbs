@@ -19,8 +19,8 @@
             </div>
         {{/each}}
     </div>
-</sector>
-<sector class="my-5">
+    </sector>
+    <sector class="my-5">
     <div class="row">
         {{#with filterBlock}}
             <div class="col-4 my-5">
@@ -32,11 +32,10 @@
                                 <input class="form-check-input" type="checkbox">
                                 <label class="check-label">{{value}}</label>
                             </div>
+                            
                         {{/each}}
                     {{/with}} 
-
                     <hr class="my-3">
-
                     {{#with brands}}
                         <h6 class="my-3">{{title}}</h6>
                             {{#with input}}
@@ -49,9 +48,7 @@
                                 </div>
                             {{/each}}
                     {{/with}}
-
                     <hr class="my-3">
-
                     {{#with price}}
                         <h6 class="my-3">{{title}}</h6>
                         {{#with range}}
@@ -67,16 +64,48 @@
                     <hr class="my-3">
                     {{#each filterList}}
                         <h6 class="my-3">{{title}}</h6>
-                         {{#each options}}
-                                 <div class="form-check mt-2">
-                                <input class="form-check-input" type="checkbox">
-                                <label class="check-label">{{value}}</label>
-                                </div>
-                            {{/each}}
+                            {{#each options}}
+                                    <div class="form-check mt-2">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="check-label">{{value}}</label>
+                                    </div>
+                                {{/each}}
+                        <hr class="my-3">
                     {{/each}}
                 </div>
             </div>  
         {{/with}}
+        <div class="col-8 my-5">
+            <div class="row">
+                {{#each goodsList}}
+                <div class="col-6 g-1">
+                    <div class="card">
+                        <img class="card-img-top" src="{{img}}" alt="Photo.img">
+                        <div class="card-body">
+                            <div class="card-title">
+                                {{#if isHot}}
+                                    <span class="badge text-bg-warning text-light text-uppercase rounded-pill">Hot!</span>
+                                {{/if}}
+                                {{#if isNew}}
+                                    <span class="badge text-bg-primary text-uppercase rounded-pill">New!</span>
+                                {{/if}}
+                                    <p class="my-2">{{#if isFast}}
+                                    <button class="btn btn-success btn-sm">Швидка доставка</button>
+                                {{/if}}</p>
+                                    <p class="my-2">{{#if isFree}}
+                                    <button class="btn btn-primary btn-sm">Бескоштовна доставка</button>
+                                {{/if}}</p>
+                                <h5>{{name}}</h5>
+                                {{#with review}}
+                                <p class="my-2">{{amount}}  {{text}}</p>
+                                {{/with}}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+        </div>
     </div>
 </sector>
 </main>
