@@ -1,3 +1,82 @@
-<main class='p-5'>
+<main class='p-3'>
+    {{> breadcrumb}}
+    
+<sector class="my-5">
+    <h1 class="ms-0 my-5">{{header}}</h1>
+    <div class="row">
+        {{#each sortBlock}}
+            <div class="col-4">
+                <select class="form-select">
+                    <option
+                        selected
+                        >{{placeholder}}</option>
+                        {{#each options}}
+                        <option
+                            value='{{value}}'
+                        >{{text}}</option>
+                        {{/each}}
+                </select>
+            </div>
+        {{/each}}
+    </div>
+</sector>
+<sector class="my-5">
+    <div class="row">
+        {{#with filterBlock}}
+            <div class="col-4 my-5">
+                <div class="card p-3">
+                    {{#with sellers}}
+                        <h6 class="my-3">{{title}}</h6>
+                        {{#each list}}
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="check-label">{{value}}</label>
+                            </div>
+                        {{/each}}
+                    {{/with}} 
 
+                    <hr class="my-3">
+
+                    {{#with brands}}
+                        <h6 class="my-3">{{title}}</h6>
+                            {{#with input}}
+                                <input class="form-input text-muted ps-2 p-1" placeholder="{{placeholder}}">
+                            {{/with}}
+                            {{#each options}}
+                                 <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="check-label">{{value}}</label>
+                                </div>
+                            {{/each}}
+                    {{/with}}
+
+                    <hr class="my-3">
+
+                    {{#with price}}
+                        <h6 class="my-3">{{title}}</h6>
+                        {{#with range}}
+                            <input class="form-input text-muted ps-2 p-1 mb-3" placeholder="{{from}}">
+                            <input class="form-input text-muted ps-2 p-1" placeholder="{{to}}">
+                        {{/with}}
+                            {{#with button}}
+                                <div class="col-2 mt-3">
+                                    <a href="{{link}}" class="btn btn-outline-dark">{{text}}</a>
+                                </div>
+                            {{/with}}
+                    {{/with}}
+                    <hr class="my-3">
+                    {{#each filterList}}
+                        <h6 class="my-3">{{title}}</h6>
+                         {{#each options}}
+                                 <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="check-label">{{value}}</label>
+                                </div>
+                            {{/each}}
+                    {{/each}}
+                </div>
+            </div>  
+        {{/with}}
+    </div>
+</sector>
 </main>
