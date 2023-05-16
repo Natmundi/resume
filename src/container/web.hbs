@@ -1,87 +1,79 @@
-<div>
+<main>
     {{>title data="My web" big=true}}
     <section>
-        <ul>
-        {{#with web}}
-       
-            <li>
-                {{#each languages}}
-                <hr>
-                
-                <div><p>{{name}}</p></div>
-                <br>
-                
-                <div>{{version}}</div>
-                <br>
-                {{description}}
-                <br>
-                
-                    <ul>
-                    {{#each elements}}
-                    <li>
-                        {{name}} - 
-                        {{description}}
-                        <br>
-                        <ul>
-                        {{#each attributes}}
-                            <li>
-                                {{name}}
-                                <br>
-                                {{description}}
-                            </li>
-                        {{/each}}
-                        </ul>
-                    </li>
-                    {{/each}}
-                    </ul>
-                <br>
-                
-                 <ul>
-                    {{#each properties}}
-                    <li>
-                        {{name}} -
-                        {{description}}
-                        <br>
-                        <ul>
-                        {{#each values}}
-                            <li>
-                                {{value}}
-                                <br>
-                                {{description}}
-                            </li>
-                        {{/each}}
-                        </ul>
-                    </li>
-                    {{/each}}
-                    </ul>
-                <br>
-                
-                 <ul>
-                    {{#each functions}}
-                    <li>
-                        {{name}} -
-                        {{description}}
-                        <br>
-                        <ul>
-                        {{#each parameters}}
-                            <li>
-                                {{name}} /
-                                {{type}}
-                                <br>
-                                {{description}}
-                            </li>
-                        {{/each}}
-                        </ul>
-                    </li>
-                    {{/each}}
-                    </ul>
+        <ul class="my-3">
+            {{#with web}}
+                <li>
+                    {{#each languages}}
+
+                    <hr class="my-5">
                     
-
-                {{/each}}
+                    <h5 class="mt-2 mb-4">{{name}}</h5>
                 
-            </li>
+                    <div class="ms-1">{{version}}</div>
+                    
+                    <p class="ms-4 my-3">{{description}}</p>
+                    
+                        <ul class="my-2 ms-5">
 
-        {{/with}}
+                            {{#each elements}}
+
+                                <li>
+                                    {{name}} - 
+                                    {{description}}
+                                    
+                                    <ul class="my-2">
+                                    {{#each attributes}}
+                                        <li>
+                                            {{name}}
+                                            <p class="my-1">{{description}}</p> 
+                                        </li>
+                                    {{/each}}
+                                    </ul>
+                                </li>
+                            {{/each}}
+
+                        </ul>
+            
+                    <ul class="my-2 ms-5">
+                        {{#each properties}}
+                            <li>
+                                {{name}} -
+                                <p class="my-1">{{description}}</p> 
+                                
+                                <ul class="my-2 ms-5">
+                                    {{#each values}}
+                                        <li>
+                                            {{value}}
+                                            <p class="my-1">{{description}}</p> 
+                                        </li>
+                                    {{/each}}
+                                </ul>
+                            </li>
+                        {{/each}}
+                    </ul>
+            
+                    <ul class="my-2 ms-5">
+                        {{#each functions}}
+                            <li>
+                                {{name}} -
+                                <p class="my-1">{{description}}</p>
+                                
+                                <ul class="my-2 ms-5">
+                                    {{#each parameters}}
+                                        <li>
+                                            {{name}} /
+                                            {{type}}
+                                            <p class="my-1">{{description}}</p> 
+                                        </li>
+                                    {{/each}}
+                                </ul>
+                            </li>
+                        {{/each}}
+                    </ul>
+                    {{/each}}
+                </li>
+            {{/with}}
         </ul>
     </section>
-</div>
+</main>

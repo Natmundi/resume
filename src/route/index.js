@@ -195,8 +195,6 @@ router.get('/education', function (req, res) {
 router.get('/work', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('work', {
-    layout: 'big',
-
     page: {
       title: 'Resume - Work',
     },
@@ -3816,6 +3814,110 @@ router.get('/index8', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('index8', {
     layout: 'index',
+    name: {
+      firstname: 'Nataliya',
+      lastname: 'Pavliuk',
+    },
+    project: {
+      version: 'Resume project',
+    },
+    title: 'List pages',
+    description:
+      'Практика HTML, список всіх сторінок, які були зроблені за 2 місяця, від простого до складнішого, цікаві і досить практичні приклади',
+    pages: [
+      {
+        text: 'bio',
+        link: '/bio',
+      },
+      {
+        text: 'car',
+        link: '/car',
+      },
+      {
+        text: 'education',
+        link: '/education',
+      },
+      {
+        text: 'facebook',
+        link: '/facebook',
+      },
+      {
+        text: 'js',
+        link: '/js',
+      },
+      {
+        text: 'mac',
+        link: '/mac',
+      },
+      {
+        text: 'person',
+        link: '/person',
+      },
+      {
+        text: 'program',
+        link: '/program',
+      },
+      {
+        text: 'shopcart',
+        link: '/shopcart',
+      },
+      {
+        text: 'shopcatalog',
+        link: '/shopcatalog',
+      },
+      {
+        text: 'shophome',
+        link: '/shophome',
+      },
+      {
+        text: 'shopnews',
+        link: '/shopnews',
+      },
+      {
+        text: 'shoporder',
+        link: '/shoporder',
+      },
+      {
+        text: 'shopproduct',
+        link: '/shopproduct',
+      },
+      {
+        text: 'shopprofile',
+        link: '/shopprofile',
+      },
+      {
+        text: 'shopreview',
+        link: '/shopreview',
+      },
+      {
+        text: 'skills',
+        link: '/skills',
+      },
+      {
+        text: 'summary',
+        link: '/summary',
+      },
+      {
+        text: 'task21',
+        link: '/task21',
+      },
+      {
+        text: 'task22',
+        link: '/task22',
+      },
+      {
+        text: 'task31',
+        link: '/task31',
+      },
+      {
+        text: 'web',
+        link: '/web',
+      },
+      {
+        text: 'work',
+        link: '/work',
+      },
+    ],
   })
   //                  ↑↑ сюди вводимо JSON дані
 })

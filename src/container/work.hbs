@@ -2,24 +2,18 @@
 Це код container файлу для summary сторінки, 
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 }}
-
-
-{{#with main}}
-    <main class="m-5">
-        <section class="ms-5">
-            <div class="m-5">
-                {{> title data="Work history" big=true}}
-            </div>
-            <div class="my-5">
-                <ul class="my-5">
+<main>
+    {{#with main}}
+        <div class="my-2 ms-3">
+            {{> title data="Work history" big=true}}
+        </div>
+            <div class="my-2">
+                <ul class="my-3">
                     {{#each works}}
-                    
                     <li>
-                        <div class="my-5">{{position}}</div>
+                        <div class="my-3 ms-2">{{position}}</div>
                         
-                        
-                        
-                        <div class="my-5">
+                        <div class="my-3 ms-2">
                             
                             {{duration.from}} - 
                             {{#if duration.to}} 
@@ -27,68 +21,40 @@
                             {{else}} 
                                 (still working) 
                             {{/if}}
-                        
                         </div>
-                        
-                        
-                        
-                        <div class="my-5">
+                        <div class="my-3 ms-2">
                             {{#if company.url}}
                                 {{> link text=company.name href=company.url blank=true noLine=true}}
                             {{else}}
                                 <b>{{company.name}}</b>
                             {{/if}}
                         </div>
-                            
-                        
-                        
-                        <div class="my-5"><strong> Projects ({{projectAmount}}) </strong></div>
-
-                        
-
-                        <ul class="m-5">
+                        <div class="my-4 ms-4"><strong> Projects ({{projectAmount}}) </strong></div>
+                        <ul class="my-2 ms-5">
                             {{#each projects}}
                             <li>
-                                <div class="m-5">
-
+                                <div class="mt-3 mb-2">
                                     {{> link text=name href=url blank=true noLine=true}}
-                                
-                                
-                                
-                                <div class="m-5">
-                                    <p>{{about}}</p>
                                 </div>
                                 
-                               
+                                <p class="my-3">{{about}}</p>
                                 
-                                <div class="m-5">
-                                    <em>Project stacks ({{stackAmount}})</em>
+                                <div class="my-3">
+                                    <b>Project stacks ({{stackAmount}})</b>
                                 </div>
-                                
-                              
-                                
-                                <div class="my-5">
+                                <div class="my-3">
                                     <ul>
                                         {{#each stacks}}
-                                        
                                         <li>
                                             {{name}}
-                                        
                                         </li>
-                                        
                                         {{/each}}
                                     </ul>
                                 </div>
-                                
-                                <br>
-                                
-                                <div class="my-5">
-                                    <em>Project awards ({{awardAmount}})</em>
+                                <div class="my-3">
+                                    <b>Project awards ({{awardAmount}})</b>
                                 </div>
-                                
-                                <br>
-                                
-                                <div class="my-5">
+                                <div class="my-3">
                                     <ul>
                                         {{#each awards}}
                                         <li>
@@ -97,28 +63,19 @@
                                         {{/each}}
                                     </ul>
                                 </div>
-
                                 </div>
-
                             </li>
                             {{/each}}
                         </ul>
-                    
                     </li>
-                    
-                    <br>
-                    
                     {{/each}}
                 </ul>
             </div>
-    
-        
-    </main>
-{{/with}}
+    {{/with}}
 
- 
+ </main>
 
-</div>
+
 
 {{!-- 
     Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs

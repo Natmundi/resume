@@ -1,0 +1,15 @@
+<div class='card p-3'>
+  <div class='row'>
+    {{#with name}}
+      <div class='col-8'>
+        <h5>{{firstname}}.
+          {{lastname}}</h5>
+      </div>
+    {{/with}}
+    {{#with project}}
+      <div class='col-4 text-end'>
+        <h5>{{version}}</h5>
+      </div>
+    {{/with}}
+  </div>
+</div>
