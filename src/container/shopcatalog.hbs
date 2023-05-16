@@ -1,0 +1,86 @@
+<main class='p-3'>
+    {{> breadcrumb}}
+    
+<sector class="my-5">
+    <h1 class="ms-0 my-5">{{header}}</h1>
+    <div class="row">
+        {{#each sortBlock}}
+            <div class="col-4">
+                <select class="form-select">
+                    <option
+                        selected
+                        >{{placeholder}}</option>
+                        {{#each options}}
+                        <option
+                            value='{{value}}'
+                        >{{text}}</option>
+                        {{/each}}
+                </select>
+            </div>
+        {{/each}}
+    </div>
+    </sector>
+    <sector class="my-5">
+    <div class="row">
+        {{#with filterBlock}}
+            <div class="col-4 my-5">
+                <div class="card p-3">
+                    {{#with sellers}}
+                        {{> shoptitle}}
+                        {{#each list}}
+                           {{> shopcheckbox}}
+                        {{/each}}
+                    {{/with}} 
+                    <hr class="my-3">
+                    {{#with brands}}
+                        {{> shoptitle}}
+                            {{#with input}}
+                                <input class="form-input text-muted ps-2 p-1" placeholder="{{placeholder}}">
+                            {{/with}}
+                            {{#each options}}
+                                 {{> shopcheckbox}}
+                            {{/each}}
+                    {{/with}}
+                    <hr class="my-3">
+                    {{#with price}}
+                        {{> shoptitle}}
+                        {{#with range}}
+                            <input class="form-input text-muted ps-2 p-1 mb-3" placeholder="{{from}}">
+                            <input class="form-input text-muted ps-2 p-1" placeholder="{{to}}">
+                        {{/with}}
+                            {{#with button}}
+                                <div class="col-2 mt-3">
+                                    <a href="{{link}}" class="btn btn-outline-dark">{{text}}</a>
+                                </div>
+                            {{/with}}
+                    {{/with}}
+                    <hr class="my-3">
+                    {{#each filterList}}
+                        {{> shoptitle}}
+                            {{#each options}}
+                                    {{> shopcheckbox}}
+                                {{/each}}
+                        <hr class="my-3">
+                    {{/each}}
+                </div>
+            </div>  
+        {{/with}}
+        <div class="col-8 my-5">
+            <div class="row">
+                {{#each goodsList}}
+                    <div class="col-6 g-1">
+                        {{> catalogItem}}
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <sector class="my-5">
+        <div class="row">
+            {{#with service}}
+                {{> shopaction}}
+            {{/with}}
+        </div>
+    </sector>
+</sector>
+</main>

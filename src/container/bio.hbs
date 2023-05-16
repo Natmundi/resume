@@ -1,22 +1,22 @@
 <div>
   <section>
 
-    <div><h1>{{name}}</h1></div>
-    <br />
-    <div>{{birthdate}} - {{birthplace}}</div>
-    <br />
-    <div>{{deathdate}} - {{deathplace}}</div>
-    <br />
-    <div>{{nationality}}</div>
-    <br />
-    <hr />
-    <div><strong>{{occupation}}</strong></div>
-    <br />
-    <div><strong>{{known_for}}</strong></div>
+    <div class='my-3'><h1>{{name}}</h1></div>
+
+    <div class='my-3'>{{birthdate}} - {{birthplace}}</div>
+
+    <div class='my-3'>{{deathdate}} - {{deathplace}}</div>
+
+    <div class='my-3'>{{nationality}}</div>
+
+    <hr class='my-5' />
+    <div class='my-5'><strong>{{occupation}}</strong></div>
+
+    <div class='my-3'><strong>{{known_for}}</strong></div>
   </section>
   <section>
-    <div><strong>Education</strong></div>
-    <ul>
+    <div class='my-3'><strong>Education</strong></div>
+    <ul class='ms-3'>
       {{#each education}}
         <li>
           {{degree}}
@@ -31,8 +31,8 @@
     </ul>
   </section>
   <section>
-    <div><strong>Publications</strong></div>
-    <ul>
+    <div class='my-3'><strong>Publications</strong></div>
+    <ul class='ms-3'>
       {{#each notable_publications}}
         <li>
           {{title}}
@@ -45,8 +45,8 @@
     </ul>
   </section>
   <section>
-    <div><strong>Partners</strong></div>
-    <ul>
+    <div class='my-3'><strong>Partners</strong></div>
+    <ul class='ms-3'>
       {{#each partners}}
         <li>
           {{name}}
@@ -59,8 +59,8 @@
     </ul>
   </section>
   <section>
-    <div><strong>Awards</strong></div>
-    <ul>
+    <div class='my-3'><strong>Awards</strong></div>
+    <ul class='ms-3'>
       {{#each awards}}
         <li>
           {{title}}
@@ -72,24 +72,24 @@
       {{/each}}
     </ul>
   </section>
-  <br />
-  <hr />
+
+  <hr class='my-5' />
   <section>
-    <br />
-    <div><em>Influences</em></div>
-    <br />
-    <div>{{influences}}</div>
-    <br />
-    <div><em>Influenced</em></div>
-    <br />
-    <div>{{influenced}}</div>
-    <br />
-    <div><em>Quotes</em></div>
-    <br />
-    <div>{{quotes}}</div>
-    <br />
-    <div><em>Discoveries</em></div>
-    <ul>
+
+    <div class='my-3'><em>Influences</em></div>
+
+    <div class='my-3'>{{influences}}</div>
+
+    <div class='my-3'><em>Influenced</em></div>
+
+    <div class='my-3'>{{influenced}}</div>
+
+    <div class='my-3'><em>Quotes</em></div>
+
+    <div class='my-3'>{{quotes}}</div>
+
+    <div class='my-3'><em>Discoveries</em></div>
+    <ul class='ms-3'>
       {{#each major_discoveries}}
         <li>
           {{title}}
@@ -100,9 +100,9 @@
         </li>
       {{/each}}
     </ul>
-    <br />
-    <div><em>Contributions</em></div>
-    <ul>
+
+    <div class='my-3'><em>Contributions</em></div>
+    <ul class='ms-3'>
       {{#with contributions}}
         <li>
           {{title}}

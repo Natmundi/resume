@@ -1,31 +1,12 @@
 <main>
-  <sector class="m-5 p-5">
-    <div class='mb-3'>
-      {{#with navigation}}
-        <div class='nav nav-tabs'>
-          {{#each links}}
-            <div class='nav-item'>
-              <a
-                href='{{href}}'
-                class='text-primary nav-link'
-              >{{text}}</a>
-            </div>
-          {{/each}}
-          <div class='nav-item'>
-            <a
-              href='#'
-              class='nav-link disabled'
-            >Disabled</a>
-          </div>
-        </div>
-      {{/with}}
-    </div>
-  </sector>
+  <sector class="m-5 p-5"></sector>
 
   <sector class='m-5 p-5'>
     {{#with newsBlock}}
       <h1 class='text-capitalize text-center'>{{title}}</h1>
+
       {{> shoppost}}
+
     {{/with}}
   </sector>
 
@@ -50,7 +31,7 @@
             </div>
           {{/each}}
 
-       <div class="row g-2">
+       <div class="row g-2 my-5">
         
           {{#each cards}}
           <div class="col-4">
@@ -95,19 +76,9 @@
   <sector class="ms-0 my-5 p-5">
     <div class='col-12'>
     {{#with subscribe}}
-        
-        <div class="card text-bg-dark p-2">
-            <h2>{{header}}</h2>
-            <p>{{description}}</p>
-            
-                {{#each buttons}}
-                <div class="col-3">
-                        <a class='btn btn-primary mb-2 ms-0' href="{{link}}">{{text}}</a>
-                </div>
-                {{/each}}
 
-        </div>
-        
+       {{> subscribecart}}
+
     {{/with}}
     </div>
   </sector>
