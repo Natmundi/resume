@@ -3442,6 +3442,7 @@ router.get('/shopcatalog', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopcatalog', {
+    layout: 'shop',
     // layout: 'shop',
     navigation: {
       links: [
