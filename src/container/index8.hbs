@@ -1,0 +1,14 @@
+<main class='p-3'>
+  <sector class='my-5'>
+    <div class='display-5 my-5'><b>{{title}}</b></div>
+    <p class='my-5'><em>{{description}}</em></p>
+  </sector>
+  <sector class='my-5'>
+    {{#each pages}}
+      <div class='my-2 p-1'><a
+          href='{{link}}'
+          class='btn btn-primary text-capitalize'
+        >{{text}}</a></div>
+    {{/each}}
+  </sector>
+</main>
